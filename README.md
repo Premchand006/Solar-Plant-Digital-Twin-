@@ -8,26 +8,11 @@ The **Yulara Solar Digital Twin** is a cloud-based analytics platform that integ
 
 ## 🚀 Key Capabilities
 
-* 
-**Real-time Monitoring:** Tracks power generation for a 1.8 MW solar installation.
-
-
-* 
-**Predictive Power Forecasting:** 7-day output predictions using the **Prophet** time-series model.
-
-
-* 
-**Financial Analytics:** Electricity spot price prediction via **XGBoost** and revenue estimation.
-
-
-* 
-**Automated Anomaly Detection:** Identifies system faults using **Isolation Forest** with 97% accuracy.
-
-
-* 
-**3D Visualization:** High-fidelity digital twin rendered in **WebGL/Three.js**.
-
-
+***Real-time Monitoring:** Tracks power generation for a 1.8 MW solar installation.
+***Predictive Power Forecasting:** 7-day output predictions using the **Prophet** time-series model.
+***Financial Analytics:** Electricity spot price prediction via **XGBoost** and revenue estimation.
+***Automated Anomaly Detection:** Identifies system faults using **Isolation Forest** with 97% accuracy.
+***3D Visualization:** High-fidelity digital twin rendered in **WebGL/Three.js**.
 
 ---
 
@@ -37,15 +22,9 @@ The platform utilizes a **Three-Tier Cloud Architecture** to process over 1 mill
 
 | Layer | Technology | Role |
 | --- | --- | --- |
-| **Frontend** | React 18, Three.js, Plotly.js | User dashboard and 3D visualization 
-
- |
-| **Backend** | Flask 3.0, Gunicorn, AWS EB | RESTful API and ML model execution 
-
- |
-| **Data** | AWS S3, Boto3 | Streaming storage for 1M+ CSV records 
-
- |
+| **Frontend** | React 18, Three.js, Plotly.js | User dashboard and 3D visualization |
+| **Backend** | Flask 3.0, Gunicorn, AWS EB | RESTful API and ML model execution |
+| **Data** | AWS S3, Boto3 | Streaming storage for 1M+ CSV records |
 
 ### Data Flow Architecture
 
@@ -59,18 +38,10 @@ The system employs four specialized models to manage different aspects of the so
 
 | Model | Algorithm | Metric | Accuracy/Score |
 | --- | --- | --- | --- |
-| **Power Forecast** | Prophet | $R^2$ Score | 98.05% 
-
- |
-| **Price Forecast** | XGBoost | $R^2$ Score | 89.86% 
-
- |
-| **Anomaly Detection** | Isolation Forest | Accuracy | 97.00% 
-
- |
-| **Revenue Model** | Formula-based | Accuracy | 100.00% 
-
- |
+| **Power Forecast** | Prophet | $R^2$ Score | 98.05% |
+| **Price Forecast** | XGBoost | $R^2$ Score | 89.86% |
+| **Anomaly Detection** | Isolation Forest | Accuracy | 97.00% |
+| **Revenue Model** | Formula-based | Accuracy | 100.00% |
 
 ### Anomaly Detection Logic
 
@@ -86,15 +57,11 @@ Where $E(h(x))$ is the average path length of sample $x$ and $c(n)$ is the avera
 
 ### Prerequisites
 
-* Python 3.11.x 
-
+* Python 3.11.
 
 * Node.js 18.x or higher 
 
-
 * AWS Account (for S3 and Elastic Beanstalk) 
-
-
 
 ### Backend Setup
 
@@ -124,22 +91,12 @@ npm start
 
 **Base URL:** `https://yulara-backend-env.eba-mt7aim3j.us-east-1.elasticbeanstalk.com` 
 
-* 
-`GET /api/stats`: Retrieve aggregate statistics (average power, efficiency, etc.).
+* `GET /api/stats`: Retrieve aggregate statistics (average power, efficiency, etc.).
 
+* `GET /api/alerts`: Get real-time system alerts and warnings.
 
-* 
-`GET /api/alerts`: Get real-time system alerts and warnings.
+* `POST /api/forecast/prophet`: Generate a 7-day power forecast.
 
-
-* 
-`POST /api/forecast/prophet`: Generate a 7-day power forecast.
-
-
-* 
-`POST /api/anomalies`: Detect faults in the most recent 1,000 data points.
-
+* `POST /api/anomalies`: Detect faults in the most recent 1,000 data points.
 
 ---
-
-Would you like me to generate a specific `requirements.txt` file or a Dockerfile for this project based on the documentation?
