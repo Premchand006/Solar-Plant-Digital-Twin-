@@ -90,9 +90,13 @@ npm start
 ## 📡 API Reference
 
 **Base URL:** `https://yulara-backend-env.eba-mt7aim3j.us-east-1.elasticbeanstalk.com` 
+
 *`GET /api/stats`: Retrieve aggregate statistics (average power, efficiency, etc.).
+
 *`GET /api/alerts`: Get real-time system alerts and warnings.
+
 *`POST /api/forecast/prophet`: Generate a 7-day power forecast.
+
 *`POST /api/anomalies`: Detect faults in the most recent 1,000 data points.
 
 ---
