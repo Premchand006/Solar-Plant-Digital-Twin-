@@ -1,0 +1,82 @@
+{
+  "task": "price_forecasting",
+  "winner": "RandomForest",
+  "features": [
+    "lag_1h",
+    "lag_24h",
+    "rolling_mean_6h",
+    "rolling_std_6h",
+    "hour",
+    "dayofweek",
+    "month"
+  ],
+  "trained_on": "2025-03-30 00:00:00",
+  "test_from": "2025-03-30 00:30:00",
+  "train_size": 56833,
+  "test_size": 14208,
+  "metrics": {
+    "mae": 37.9863,
+    "rmse": 271.0455,
+    "r2": 0.5593,
+    "mape": 80.5,
+    "cv_mae_mean": 48.4288,
+    "cv_mae_std": 12.9073,
+    "feature_importance": {
+      "rolling_std_6h": 0.25570790145811734,
+      "rolling_mean_6h": 0.25463430797343334,
+      "lag_1h": 0.24360823458577835,
+      "hour": 0.10593440814743724,
+      "lag_24h": 0.10184690241840334,
+      "month": 0.024501360209667592,
+      "dayofweek": 0.013766885207162769
+    },
+    "train_time_s": 15.1
+  },
+  "all_results": {
+    "Prophet": {
+      "mae": 59.1002,
+      "rmse": 337.301,
+      "r2": 0.3175,
+      "mape": 147.88,
+      "train_time_s": 29.5
+    },
+    "XGBoost": {
+      "mae": 38.8937,
+      "rmse": 281.7219,
+      "r2": 0.5239,
+      "mape": 92.01,
+      "cv_mae_mean": 50.1935,
+      "cv_mae_std": 15.0442,
+      "feature_importance": {
+        "rolling_std_6h": 0.2349880188703537,
+        "hour": 0.19363908469676971,
+        "lag_1h": 0.1709458827972412,
+        "rolling_mean_6h": 0.11507008224725723,
+        "month": 0.10005121678113937,
+        "dayofweek": 0.09341607987880707,
+        "lag_24h": 0.0918896347284317
+      },
+      "train_time_s": 8.2
+    },
+    "RandomForest": {
+      "mae": 37.9863,
+      "rmse": 271.0455,
+      "r2": 0.5593,
+      "mape": 80.5,
+      "cv_mae_mean": 48.4288,
+      "cv_mae_std": 12.9073,
+      "feature_importance": {
+        "rolling_std_6h": 0.25570790145811734,
+        "rolling_mean_6h": 0.25463430797343334,
+        "lag_1h": 0.24360823458577835,
+        "hour": 0.10593440814743724,
+        "lag_24h": 0.10184690241840334,
+        "month": 0.024501360209667592,
+        "dayofweek": 0.013766885207162769
+      },
+      "train_time_s": 15.1
+    }
+  },
+  "timestamp": "2026-02-28T18:55:24.980795",
+  "note": "AEMO NSW proxy data \u2014 3 days only. Use NT PPA=$250/MWh for revenue."
+}

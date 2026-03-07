@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-02-28T18:55:41.277025",
+  "models": {
+    "power": {
+      "winner": "Prophet",
+      "mae_kw": 24.3275,
+      "rmse_kw": 44.0171,
+      "r2": 0.9905,
+      "mape_pct": 7.34,
+      "cv_mae": null,
+      "all_models": {
+        "Prophet": {
+          "mae": 24.3275,
+          "rmse": 44.0171,
+          "r2": 0.9905
+        },
+        "XGBoost": {
+          "mae": 56.0676,
+          "rmse": 132.4467,
+          "r2": 0.9138
+        },
+        "RandomForest": {
+          "mae": 88.9332,
+          "rmse": 220.918,
+          "r2": 0.7602
+        }
+      },
+      "trained_on": "2024-01-22 03:00:00",
+      "test_from": "2024-01-22 04:00:00"
+    },
+    "price": {
+      "winner": "RandomForest",
+      "mae_mwh": 37.9863,
+      "rmse_mwh": 271.0455,
+      "r2": 0.5593,
+      "all_models": {
+        "Prophet": {
+          "mae": 59.1002,
+          "rmse": 337.301,
+          "r2": 0.3175
+        },
+        "XGBoost": {
+          "mae": 38.8937,
+          "rmse": 281.7219,
+          "r2": 0.5239
+        },
+        "RandomForest": {
+          "mae": 37.9863,
+          "rmse": 271.0455,
+          "r2": 0.5593
+        }
+      },
+      "trained_on": "2025-03-30 00:00:00",
+      "note": "AEMO NSW proxy data \u2014 3 days only. Use NT PPA=$250/MWh for revenue."
+    },
+    "anomaly": {
+      "model": "IsolationForest",
+      "n_anomalies": 22977,
+      "anomaly_pct": 5.0,
+      "n_train": 459531
+    },
+    "revenue": {
+      "method": "formula",
+      "formula": "power_kw / 1000 \u00d7 $250/MWh",
+      "NT_PPA_RATE": 250.0
+    }
+  }
+}

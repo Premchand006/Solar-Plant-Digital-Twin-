@@ -1,0 +1,70 @@
+{
+  "task": "power_forecasting",
+  "winner": "Prophet",
+  "features": [
+    "irradiance",
+    "temp_c",
+    "wind_speed",
+    "hour",
+    "dayofweek",
+    "month",
+    "is_daylight"
+  ],
+  "trained_on": "2024-01-22 03:00:00",
+  "test_from": "2024-01-22 04:00:00",
+  "train_size": 67972,
+  "test_size": 16993,
+  "metrics": {
+    "mae": 24.3275,
+    "rmse": 44.0171,
+    "r2": 0.9905,
+    "mape": 7.34,
+    "train_time_s": 110.3
+  },
+  "all_results": {
+    "Prophet": {
+      "mae": 24.3275,
+      "rmse": 44.0171,
+      "r2": 0.9905,
+      "mape": 7.34,
+      "train_time_s": 110.3
+    },
+    "XGBoost": {
+      "mae": 56.0676,
+      "rmse": 132.4467,
+      "r2": 0.9138,
+      "mape": 16.38,
+      "cv_mae_mean": 41.0617,
+      "cv_mae_std": 25.3968,
+      "feature_importance": {
+        "irradiance": 0.4762696921825409,
+        "is_daylight": 0.31330838799476624,
+        "hour": 0.1455620378255844,
+        "wind_speed": 0.04026806727051735,
+        "temp_c": 0.017609214410185814,
+        "month": 0.005933356937021017,
+        "dayofweek": 0.001049298676662147
+      },
+      "train_time_s": 11.5
+    },
+    "RandomForest": {
+      "mae": 88.9332,
+      "rmse": 220.918,
+      "r2": 0.7602,
+      "mape": 22.69,
+      "cv_mae_mean": 42.2721,
+      "cv_mae_std": 26.243,
+      "feature_importance": {
+        "irradiance": 0.6406799696049104,
+        "hour": 0.13144201953031842,
+        "is_daylight": 0.09704007583964545,
+        "wind_speed": 0.06906148298805463,
+        "temp_c": 0.05210721533363472,
+        "month": 0.009177097409085087,
+        "dayofweek": 0.0004921392943513861
+      },
+      "train_time_s": 14.0
+    }
+  },
+  "timestamp": "2026-02-28T18:54:31.931355"
+}

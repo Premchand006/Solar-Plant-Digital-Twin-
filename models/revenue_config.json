@@ -1,0 +1,9 @@
+{
+  "task": "revenue_estimation",
+  "method": "formula",
+  "formula": "revenue_per_hour = (power_kw / 1000) * NT_PPA_RATE",
+  "NT_PPA_RATE": 250.0,
+  "unit": "$/hour",
+  "note": "Revenue is computed from the winning power model forecast. No separate revenue ML model \u2014 avoids data leakage. NT PPA rate = $250/MWh (off-grid, not NEM-connected).",
+  "timestamp": "2026-02-28T18:55:41.273985"
+}

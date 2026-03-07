@@ -1,0 +1,29 @@
+# PRIVATE KEY - NEVER COMMIT
+*.pem
+
+# Raw data files (store in S3)
+*.csv
+
+# Deployment zips and artifacts
+*.zip
+*.msi
+*.log
+
+# Generated outputs
+plot*.png
+price_cache/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Node
+node_modules/
+build/
+dist/
+
+# Office docs
+*.docx
+*.xlsx

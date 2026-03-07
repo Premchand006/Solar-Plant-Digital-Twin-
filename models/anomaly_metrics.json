@@ -1,0 +1,16 @@
+{
+  "task": "anomaly_detection",
+  "model": "IsolationForest",
+  "features": [
+    "power_kw",
+    "irradiance",
+    "temp_c",
+    "wind_speed",
+    "efficiency"
+  ],
+  "n_train": 459531,
+  "n_anomalies": 22977,
+  "anomaly_pct": 5.0,
+  "contamination": 0.05,
+  "timestamp": "2026-02-28T18:55:41.239851"
+}
